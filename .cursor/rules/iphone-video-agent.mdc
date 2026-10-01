@@ -1,0 +1,14 @@
+---
+description: عند طلب فيديو للتطبيق أو خطوات من فيديو أو Shortcuts/Automation على الآيفون، اتبع skill الوكيل
+globs:
+alwaysApply: false
+---
+
+# قاعدة تفعيل وكيل فيديو الآيفون
+
+إذا طلب المستخدم فيديو/ديمو/tutorial لتطبيق موبايل، أو استخراج خطوات من فيديو، أو شرح iPhone Shortcuts / Automation / App Intents:
+
+1. اقرأ واتبع `.cursor/skills/iphone-mobile-video-agent/SKILL.md`
+2. راجع المعرفة في `docs/iphone/`
+3. استخدم قوالب `templates/`
+4. لا تكتب خطوات من فيديو بدون مراجعة بصرية حقيقية
