@@ -1,0 +1,575 @@
+/* Public Sans is licensed under the SIL Open Font License. See fonts/OFL.txt. */
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/public-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/public-sans-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/public-sans-600.woff2") format("woff2");
+}
+
+:root {
+  --paper: #f6f5f2;
+  --ink: #1a1d1a;
+  --muted: #5c615c;
+  --rule: #d9d6cf;
+  --link: #1e4d5c;
+  --font: "Public Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  --shell: 60rem;
+  --measure: 45rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--link);
+  color: var(--paper);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+#content:focus,
+#content:focus-visible {
+  outline: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+p,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: translateY(-150%);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.65rem 0.9rem;
+  z-index: 5;
+  text-decoration: none;
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.shell {
+  width: min(var(--shell), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+
+.header__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1rem;
+}
+
+.wordmark {
+  display: inline-block;
+  min-height: 32px;
+  color: var(--ink);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-decoration: none;
+  border-bottom: 3px solid var(--link);
+  padding-bottom: 0.08em;
+}
+
+.wordmark:hover {
+  color: var(--link);
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.nav__list a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--link);
+}
+
+main {
+  flex: 1 0 auto;
+  padding-bottom: 1rem;
+}
+
+.notice {
+  margin-top: 1.5rem;
+  border: 1px solid var(--ink);
+  padding: 1.15rem 1.2rem 1.3rem;
+}
+
+.notice__label {
+  margin: 0 0 0.7rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.notice__text {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.notice h1,
+.page-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.notice .lede,
+.lede {
+  margin-top: 0.85rem;
+  max-width: 40rem;
+  font-size: 1.1875rem;
+  line-height: 1.45;
+}
+
+.facts {
+  display: grid;
+  gap: 1rem;
+  margin: 1.35rem 0 0;
+}
+
+.facts div {
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ink);
+}
+
+.facts dt {
+  margin: 0 0 0.3rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.action-row {
+  margin: 1.35rem 0 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.block {
+  margin-top: 2.75rem;
+}
+
+.block h2,
+.section h2 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
+}
+
+.block p + p,
+.section p + p {
+  margin-top: 0.85rem;
+}
+
+.plain-list {
+  list-style: none;
+  margin-top: 0.85rem;
+  padding: 0;
+}
+
+.plain-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.plain-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--ink);
+}
+
+.page-intro {
+  margin-top: 1.5rem;
+}
+
+.published {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.contents {
+  margin: 1.15rem 0 0;
+  padding-left: 1.3rem;
+  max-width: var(--measure);
+}
+
+.contents li {
+  margin: 0.2rem 0;
+  padding-left: 0.2rem;
+}
+
+.contents li::marker {
+  color: var(--muted);
+}
+
+.section {
+  margin-top: 2.5rem;
+  scroll-margin-top: 1.25rem;
+}
+
+.endmark {
+  margin-top: 3rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.email-display {
+  margin-top: 1.15rem;
+  font-family: var(--mono);
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.field {
+  margin-top: 1.2rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.hint {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.field input,
+.field textarea,
+.result textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.45;
+}
+
+.field textarea,
+.result textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-width: 2px;
+}
+
+.field-error {
+  margin: 0.4rem 0 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.form-actions {
+  margin-top: 1.15rem;
+}
+
+.button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.form-note {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.result {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ink);
+}
+
+.result h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+.result textarea {
+  margin-top: 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+}
+
+.result .button {
+  margin-top: 0.75rem;
+}
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--rule);
+  padding-block: 1.6rem 2rem;
+}
+
+.footer__name {
+  margin: 0 0 0.45rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+  list-style: none;
+  margin: 0 0 0.7rem;
+  padding: 0;
+}
+
+.footer__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 500;
+}
+
+.footer__meta {
+  margin: 0.35rem 0 0;
+  max-width: var(--measure);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 52rem) {
+  .header__bar {
+    padding-block: 1.15rem;
+  }
+
+  .wordmark {
+    font-size: 3rem;
+  }
+
+  .notice {
+    padding: 1.4rem 1.5rem 1.5rem;
+  }
+
+  .facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.6rem;
+  }
+
+  .shell {
+    width: min(var(--shell), calc(100% - 4rem));
+  }
+}
+
+@media (min-width: 52rem) {
+  .contents {
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+
+  .contents li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 40rem) {
+  .shell {
+    width: min(var(--shell), calc(100% - 2rem));
+  }
+
+  .header__bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .notice {
+    margin-top: 1.1rem;
+    padding: 1rem 0.95rem 1.05rem;
+  }
+
+  .facts {
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .facts dd {
+    font-size: 1.05rem;
+  }
+}
+
+@media print {
+  body {
+    display: block;
+    background: #fff;
+  }
+
+  .skip,
+  .form-actions,
+  .button {
+    display: none !important;
+  }
+
+  .site-header,
+  .site-footer,
+  .notice,
+  .facts div {
+    border-color: #000;
+  }
+
+  a {
+    color: #000;
+  }
+}

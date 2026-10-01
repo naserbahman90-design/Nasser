@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — peptid.co.uk</title>
+  <meta name="description" content="Write to peptid.co.uk at info@peptid.co.uk. This is not an order form. There is no shop.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F6F5F2">
+  <meta name="referrer" content="no-referrer">
+  <link rel="canonical" href="https://peptid.co.uk/contact/">
+  <meta property="og:title" content="Contact — peptid.co.uk">
+  <meta property="og:description" content="Write to peptid.co.uk at info@peptid.co.uk. This is not an order form. There is no shop.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peptid.co.uk/contact/">
+  <meta property="og:locale" content="en_GB">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/public-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header__bar">
+      <a class="wordmark" href="/">peptid</a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/legal/">Legal</a></li>
+          <li><a href="/contact/" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <div class="shell">
+      <aside class="notice" aria-labelledby="site-notice-label">
+        <p id="site-notice-label" class="notice__label">Notice</p>
+        <p class="notice__text">This website does not sell unlicensed medicines. There is no shop.</p>
+      </aside>
+      <header class="page-intro measure">
+        <h1 class="page-title">Contact</h1>
+        <p class="lede">Write with a general question about this website. This is not an order form.</p>
+        <address class="email-display"><a href="mailto:info@peptid.co.uk?subject=Question%20about%20the%20peptid.co.uk%20website">info@peptid.co.uk</a></address>
+      </header>
+      <div class="measure">
+        <section class="block" aria-labelledby="write-about">
+          <h2 id="write-about">What to write</h2>
+          <p>Questions about these pages are welcome. Questions that ask for products, prices, or how to obtain or use a substance are not answered.</p>
+          <p>A telephone number and a postal address are not published. Email is the only route.</p>
+        </section>
+        <section class="block" aria-labelledby="write-heading">
+          <h2 id="write-heading">Send a message</h2>
+          <form
+            data-contact-form
+            action="mailto:info@peptid.co.uk"
+            method="post"
+            enctype="text/plain"
+            novalidate
+          >
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="200" required aria-describedby="name-error">
+              <p id="name-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required inputmode="email" spellcheck="false" aria-describedby="email-error">
+              <p id="email-error" class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="message">Your question</label>
+              <p id="message-hint" class="hint">A general question about this website. Up to 800 characters.</p>
+              <textarea id="message" name="body" maxlength="800" required aria-describedby="message-hint message-error" spellcheck="true"></textarea>
+              <p id="message-error" class="field-error" hidden></p>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="submit">Open email to info@peptid.co.uk</button>
+              <p class="form-note">This opens your email program with the message addressed to info@peptid.co.uk. It does not place an order, and this website does not store the message.</p>
+            </div>
+          </form>
+          <div class="result" data-contact-result hidden>
+            <h2 tabindex="-1">Send this message</h2>
+            <p data-contact-status></p>
+            <textarea data-contact-body readonly aria-label="Message to copy"></textarea>
+            <button class="button" type="button" data-copy-message>Copy message</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <p class="footer__name">peptid.co.uk</p>
+      <ul class="footer__nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/legal/">Legal</a></li>
+        <li><a href="/contact/" aria-current="page">Contact</a></li>
+      </ul>
+      <p><a href="mailto:info@peptid.co.uk">info@peptid.co.uk</a></p>
+      <p class="footer__meta">© 2026 peptid.co.uk. A company number, postal address, and telephone number are not published on this website.</p>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
